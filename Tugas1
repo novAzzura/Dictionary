@@ -1,0 +1,23 @@
+kamus = {
+    'apel': 'buah berwarna merah atau hijau',
+    'pisang': 'buah kuning yang panjang',
+    'jeruk': 'buah citrus yang berwarna oranye',
+    'mangga': 'buah berwarna kuning atau hijau dengan daging manis',
+    'anggur': 'buah kecil berwarna ungu atau hijau yang tumbuh dalam kelompok',
+    'durian': 'buah yang mempunyai duri dan bau yang menyengat, biasanya buah ini tumbuh di udara yang dingin',
+    'salak' : 'buah yang mempunyai kulit warna hitam dan berduri'
+}
+
+def cari_kata(kata):
+    return kamus.get(kata, 'Kata tidak ditemukan dalam kamus.')
+
+def masukkan():
+    print("Selamat datang di kamus sederhana!")
+    while True:
+        kata_input = input("Masukkan kata : ")
+        if kata_input.lower() == 'keluar':
+            print("Program selesai.")
+            break
+        arti = cari_kata(kata_input)
+        print(f"Arti '{kata_input}': {arti}")
+masukkan()
